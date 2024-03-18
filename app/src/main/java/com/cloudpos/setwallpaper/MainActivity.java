@@ -19,11 +19,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * button click event : set a wallpaper
+     * @param view
+     */
     @SuppressLint("ResourceType")
-    public void setWp(View view) {
+    public void setWallpaper(View view) {
         //need permission :     <uses-permission android:name="android.permission.SET_WALLPAPER" />
         WallpaperManager mWallManager = WallpaperManager.getInstance(this);
         try {
+            //set picture from the drawable resource.
             mWallManager.setResource(R.drawable.wp0605_1);
             Toast.makeText(this, "setWallpaper wp0605_1 success ", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
